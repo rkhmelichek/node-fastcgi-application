@@ -150,7 +150,7 @@ function createHandler(appCb, errCb) {
             if (!headers) {
               headers = {};
             }
-            headers['Status'] = matches[1];
+            headers['status'] = ['Status', matches[1]];
             http.OutgoingMessage.prototype._storeHeader.apply(this, ['', headers]);
           };
 
